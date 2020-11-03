@@ -1,0 +1,13 @@
+.co-home {
+  &__page {
+    @apply w-full h-screen flex flex-col justify-center items-center;
+  }
+
+  &__title {
+    @apply text-center text-6xl text-gray-600 mt-8;
+  }
+
+  &__subtitle {
+    @apply text-center underline text-gray-500;
+  }
+}

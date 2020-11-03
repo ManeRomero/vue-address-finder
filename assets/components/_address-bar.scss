@@ -1,0 +1,79 @@
+.co-address-bar {
+  &__container {
+    @apply w-full flex justify-center items-center min-h-20 bg-gray-900 fixed top-0;
+  }
+
+  &__inner {
+    @apply w-11/12 mx-auto flex justify-start items-center;
+
+    @screen lg {
+      @apply w-6/12 justify-center;
+    }
+  }
+
+  &__selector {
+    &-container {
+      @apply w-28 flex justify-center items-center relative;
+      @apply border-b-2 border-gray-400 cursor-pointer;
+
+      &:hover {
+        @apply border-white;
+      }
+
+      @screen lg {
+        @apply w-2/12;
+      }
+    }
+
+    &-text {
+      @apply text-gray-400 font-semibold;
+
+      &:hover {
+        @apply text-white;
+      }
+    }
+
+    &-chevron {
+      @apply text-gray-400 transform rotate-90 ml-4 font-bold;
+    }
+  }
+
+  &__dropdown {
+    &-container {
+      @apply w-full rounded-b-lg absolute top-0 left-0 bg-gray-600 mt-12;
+    }
+
+    &-text {
+      @apply text-gray-400 font-bold p-2 cursor-pointer;
+
+      &:hover {
+        @apply text-white;
+      }
+    }
+  }
+
+  &__input {
+    &-container {
+      @apply flex justify-between items-center w-auto;
+    }
+
+    &-tooltip {
+      @apply h-5 w-5 flex justify-center items-center mt-2 ml-2 cursor-pointer;
+      @apply rounded-full border-2 border-gray-400 text-gray-400 text-xs;
+    }
+
+    &-field {
+      @apply bg-transparent border-b-2 border-gray-400 text-gray-400 pl-2;
+      @apply outline-none ml-2 relative;
+    }
+
+    &-clear {
+      @apply absolute right-2 top-0 bg-gray-600 text-white rounded-full w-4 h-4;
+      @apply text-xs flex justify-center items-center font-bold cursor-pointer;
+    }
+
+    &-label {
+      @apply absolute right-2 -bottom-3 bg-gray-900 px-1 text-white uppercase z-50 text-xs;
+    }
+  }
+}
